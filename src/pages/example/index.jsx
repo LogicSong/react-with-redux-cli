@@ -1,21 +1,11 @@
-import { connect } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import actions from './service/actions';
 
 const { add } = actions;
 const Home = props => {
-  console.log(props);
-  let { number, add } = props;
-  number++;
-  return <div onClick={add}>{number}</div>;
+  const example = useSelector(state => state.exampleReducer);
+  const dispatch = useDispatch();
+  return <div onClick={() => dispatch(add)}>{example.number}</div>;
 };
-export default connect(
-  state => {
-    return state.exampleReducer;
-  },
-  dispatch => {
-    return {
-      add: () => dispatch(add)
-    };
-  }
-)(Home);
-// export default Home;
+
+export default Home;

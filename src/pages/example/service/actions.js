@@ -7,7 +7,6 @@ export default {
         resolve();
       }, 1000);
     });
-    console.log(111);
     return dispatch({
       type: types.ADD
     });
