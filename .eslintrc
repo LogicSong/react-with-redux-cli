@@ -1,0 +1,16 @@
+{
+  "extends": ["plugin:prettier/recommended"],
+  // "plugins": ["prettier"],
+  // "rules": {
+  //   "prettier/prettier": ["error"]
+  // }
+  "parserOptions": {
+    "ecmaVersion": 2020,//设置为 3， 5 (默认)， 6、7 或 8 指定你想要使用的 ECMAScript 版本。你也可以指定为 2015（同 6），2016（同 7），或 2017（同 8）使用年份命名
+    "sourceType":"module",//设置为 "script" (默认) 或 "module"（如果你的代码是 ECMAScript 模块)。
+    "ecmaFeatures": { //这是个对象，表示你想使用的额外的语言特性
+      "globalReturn":true,//允许在全局作用域下使用 return 语句
+      "impliedStrict":true,//启用全局 strict mode (如果 ecmaVersion 是 5 或更高)
+      "jsx": true // 启用 JSX
+    }
+  }
+}
